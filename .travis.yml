@@ -15,7 +15,7 @@ after_success:
  - docker build -t nickadamu/multi-server ./server
  - docker build -t nickadamu/multi-worker ./worker
 #  Login into docker cli
- - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+ - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 # Push images to docker hub
  - docker push nickadamu/multi-client
  - docker push nickadamu/multi-worker
