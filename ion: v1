@@ -1,0 +1,96 @@
+[33mcommit 7b4847f5b6b87b0fc42cb3f13b34402bbd824364[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Nicholas <nickadamu@gmail.com>
+Date:   Thu Oct 24 12:19:23 2019 +0000
+
+    Fixed merge conflict in pg service and deployment config
+
+[33mcommit 27a6d342f9ce762585ac79d76f3ea32b6ff52fea[m[33m ([m[1;31morigin/master[m[33m)[m
+Merge: e4cda7f 3fe720e
+Author: oboi_niqo <32638668+nodamu@users.noreply.github.com>
+Date:   Thu Oct 24 10:41:34 2019 +0000
+
+    Merge pull request #2 from nodamu/revert-1-database-pvc
+    
+    Revert "Added pg database pvc config"
+
+[33mcommit 3fe720e336dd0189b00355a841b23888ccb597d6[m
+Author: oboi_niqo <32638668+nodamu@users.noreply.github.com>
+Date:   Thu Oct 24 10:37:08 2019 +0000
+
+    Revert "Added pg database pvc config"
+
+[33mcommit e4cda7fc4933356fbb4cad28725011f096ef2c05[m
+Merge: c7e3089 8499a45
+Author: oboi_niqo <32638668+nodamu@users.noreply.github.com>
+Date:   Thu Oct 24 10:36:04 2019 +0000
+
+    Merge pull request #1 from nodamu/database-pvc
+    
+    Added pg database pvc config
+
+[33mcommit 8499a4521f3fa9df17a8e8edacd668af514d8b6d[m
+Author: Nicholas <nickadamu@gmail.com>
+Date:   Thu Oct 24 10:23:31 2019 +0000
+
+    Added pg database pvc config
+
+[33mcommit c7e3089f33e123efbf505779d7ba3bf8724e3198[m
+Author: Nicholas <nickadamu@gmail.com>
+Date:   Wed Oct 16 16:01:49 2019 +0000
+
+    Added README
+
+[33mcommit 8a8c7eb271dbec6368d3835ef285a6f62684c65e[m
+Author: Nicholas <nickadamu@gmail.com>
+Date:   Wed Oct 16 15:57:32 2019 +0000
+
+    Added redis deployment
+
+[33mcommit 0863680283193a78e5d2f2b76531028ed24a37b9[m
+Author: Nicholas <nickadamu@gmail.com>
+Date:   Wed Oct 16 11:09:03 2019 +0000
+
+    Added redis deployment
+
+[33mcommit 303e6b1fa82b80d8eeff975c651967a6c48cb277[m
+Author: Nicholas <nickadamu@gmail.com>
+Date:   Wed Oct 16 10:52:50 2019 +0000
+
+    Added server deployment and clusterip service
+
+[33mcommit 921c762b7521522be12c5f7d99f5bbf279984175[m
+Author: Nicholas <nickadamu@gmail.com>
+Date:   Wed Oct 16 10:31:24 2019 +0000
+
+    Added k8s config files
+
+[33mcommit 47763f7f1881b9bd233ef6d8bcb6741b211fa2ab[m
+Author: Nicholas <nickadamu@gmail.com>
+Date:   Fri Sep 20 10:59:49 2019 +0000
+
+    Fixed environment docker
+    variable issue
+
+[33mcommit 96ea5e8909c35f2d4b719a3f950ca1d0d4e8ede7[m
+Author: Nicholas <nickadamu@gmail.com>
+Date:   Thu Sep 19 19:56:56 2019 +0000
+
+    Fixed issue
+
+[33mcommit cea4adc313c1c5e5803bb3e494257ecca5f776c2[m
+Author: Nicholas <nickadamu@gmail.com>
+Date:   Thu Sep 19 17:04:24 2019 +0000
+
+    Added travis ci
+
+[33mcommit e5a3d5decbadda15222e5055a3e9510b1366cef3[m
+Author: Nicholas <nickadamu@gmail.com>
+Date:   Thu Sep 19 16:39:28 2019 +0000
+
+    Initial commit
+
+[33mcommit aedcf6ce4c77968d1de3a7e7a94bdba327bfa47a[m
+Author: Nicholas <nickadamu@gmail.com>
+Date:   Thu Sep 19 16:34:44 2019 +0000
+
+    Initial commit
