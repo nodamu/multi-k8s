@@ -10,11 +10,20 @@ before_install:
   - echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
   - sudo apt-get update
   - sudo apt-get install -y kubectl
+  - sudo snap install doctl
+  - sudo snap connect doctl:kube-config
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker build -t nickadamu/react-client-test -f ./client/Dockerfile.dev
 
 
 script:
-  - docker run nickadamu/fib-test npm test -- --coverage
+  - docker run nickadamu/react-client-test npm test -- --coverage
 
+deploy:
+  provider : script
+  script: bash ./deploy.sh
+  on:
+    branch:master
 after_success:
   - docker build -t nickadamu/multi-client ./client
   - docker build -t nickadamu/multi-nginx ./nginx
