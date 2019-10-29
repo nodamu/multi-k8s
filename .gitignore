@@ -1,6 +1,5 @@
 /node_modules
 
-multi-k8s-kubeconfig.yaml
 
 # IDE - VSCode
 .vscode/*
