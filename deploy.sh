@@ -13,7 +13,7 @@ docker push nickadamu/multi-worker:$SHA
 
 kubectl --kubeconfig=multi-k8s-kubeconfig.yaml apply -f k8s/
 
-kubectl  --kubeconfig=multi-k8s-kubeconfig.yaml set image deployments/client-deployments client-deployment=nickadamu/multi-client:$SHA
-kubectl  --kubeconfig=multi-k8s-kubeconfig.yaml set image deployments/server-deployments server-deployment=nickadamu/multi-server:$SHA
-kubectl  --kubeconfig=multi-k8s-kubeconfig.yaml set image deployments/worker-deployments worker-deployment=nickadamu/multi-worker:$SHA
+kubectl  --kubeconfig=../multi-k8s-kubeconfig.yaml set image deployments/client-deployments client-deployment=nickadamu/multi-client:$SHA
+kubectl  --kubeconfig=../multi-k8s-kubeconfig.yaml set image deployments/server-deployments server-deployment=nickadamu/multi-server:$SHA
+kubectl  --kubeconfig=../multi-k8s-kubeconfig.yaml set image deployments/worker-deployments worker-deployment=nickadamu/multi-worker:$SHA
 
