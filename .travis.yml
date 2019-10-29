@@ -15,6 +15,10 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t nickadamu/react-client-test -f ./client/Dockerfile.dev
 
+env:
+  global:
+    - SHA=$(git rev-parse HEAD)
+
 
 script:
   - docker run nickadamu/react-client-test npm test -- --coverage
@@ -23,16 +27,4 @@ deploy:
   provider : script
   script: bash ./deploy.sh
   on:
-    branch:master
-after_success:
-  - docker build -t nickadamu/multi-client ./client
-  - docker build -t nickadamu/multi-nginx ./nginx
-  - docker build -t nickadamu/multi-server ./server
-  - docker build -t nickadamu/multi-worker ./worker
-  #  Login into docker cli
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  # Push images to docker hub
-  - docker push nickadamu/multi-client
-  - docker push nickadamu/multi-worker
-  - docker push nickadamu/multi-nginx
-  - docker push nickadamu/multi-server
+    branch: master
