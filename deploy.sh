@@ -10,8 +10,9 @@ docker push nickadamu/multi-client:$SHA
 docker push nickadamu/multi-server:$SHA
 docker push nickadamu/multi-worker:$SHA
 
+ls -la
 
-kubectl --kubeconfig multi-k8s-kubeconfig.yaml apply -f k8s/
+kubectl --kubeconfig /home/travis/build/nodamu/multi-k8s/multi-k8s-kubeconfig.yaml apply -f k8s/
 
 kubectl  --kubeconfig /home/travis/build/nodamu/multi-k8s/multi-k8s-kubeconfig.yaml set image deployments/client-deployment client-deployment=nickadamu/multi-client:$SHA
 kubectl  --kubeconfig /home/travis/build/nodamu/multi-k8s/multi-k8s-kubeconfig.yaml set image deployments/server-deployment server-deployment=nickadamu/multi-server:$SHA
