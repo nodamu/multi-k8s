@@ -5,6 +5,7 @@ services:
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_1ba1eb16049b_key -iv $encrypted_1ba1eb16049b_iv -in multi-k8s-kubeconfig.yaml.enc -out multi-k8s-kubeconfig.yaml -d
+  - cp multi-k8s-kubeconfig.yaml ~/.kube/config
   - sudo apt-get update && sudo apt-get install -y apt-transport-https
   - curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
   - echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
