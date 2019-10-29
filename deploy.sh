@@ -10,7 +10,7 @@ docker push nickadamu/multi-client:$SHA
 docker push nickadamu/multi-server:$SHA
 docker push nickadamu/multi-worker:$SHA
 
-ls -la
+openssl aes-256-cbc -K $encrypted_1ba1eb16049b_key -iv $encrypted_1ba1eb16049b_iv -in multi-k8s-kubeconfig.yaml.enc -out multi-k8s-kubeconfig.yaml -d
 
 kubectl --kubeconfig /home/travis/build/nodamu/multi-k8s/multi-k8s-kubeconfig.yaml apply -f k8s/
 
